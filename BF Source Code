@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Basketball Forever</title>
+<style type="text/css">@font-face{font-family:'bentonsansregular';src:url('fonts/bentonsans-light-webfont.eot');src:url('fonts/bentonsans-light-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/bentonsans-light-webfont.woff2') format('woff2'),url('fonts/bentonsans-light-webfont.woff') format('woff'),url('fonts/bentonsans-light-webfont.ttf') format('truetype'),url('fonts/bentonsans-light-webfont.svg#bentonsansregular') format('svg');font-weight:normal;font-style:normal;}body{margin:0;background:#000;}video{position:fixed;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;z-index:-100;transform:translateX(-50%) translateY(-50%);background-size:cover;transition:1s opacity;}.stopfade{opacity:.5;}@media screen and (max-width: 500px) {.rs{width:60%!important;}}@media screen and (max-height: 600px) {.rs-image{height:13%!important;}.rs-image_two{height:25%!important;}}@media screen and (max-device-width: 800px) {html{background:url() #000 no-repeat center center fixed;}#bgvid{display:none;}.rs-image{width:80%;}.rs-image_two{width:30%;}}.volume-button-down{font-size:58px!important;text-align:center;color:rgba(255,255,255,0.8);text-shadow:2px 1px 12px black;transition:all 100ms cubic-bezier(.37,-0.87,.54,1.71);cursor:pointer;}.volume-button-down:hover{transform:scale3d(1.4,1.4,1.4);}.volume-button-up{font-size:58px!important;text-align:center;color:rgba(255,255,255,0.8);text-shadow:2px 1px 12px black;transition:all 100ms cubic-bezier(.37,-0.87,.54,1.71);cursor:pointer;margin-left:17px;}.social-icon{color:rgba(255,255,255,0.9);font-size:42px!important;margin-right:42px;transition:150ms cubic-bezier(.37,-0.87,.54,1.71);}.social-icon:hover{transform:scale3d(1.4,1.4,1.4);}.rs{transition:all 100ms cubic-bezier(.37,-0.87,.54,1.71);}.rs:hover{transform:scale3d(1.09,1.09,1.09);}.volume-button-up:hover{transform:scale3d(1.4,1.4,1.4);}input[type=text]{background-color:rgba(255,255,255,0.21);border:1px solid white;border-radius:2px;padding:12px;font-size:17px;font-family:'bentonsansregular';transition:0.2s all linear;color:white;text-transform:uppercase;margin-top:4px;}*:focus{outline:0;}input[type=text]:hover{background-color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.21);border-radius:2px;}input[type=text]:focus{background-color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.21);}::-webkit-input-placeholder{color:#ccc;font-weight:300;font-family:'bentonsansregular';}:-moz-placeholder{color:#ccc;font-weight:300;font-family:'bentonsansregular';}::-moz-placeholder{color:#ccc;font-weight:300;font-family:'bentonsansregular';}:-ms-input-placeholder{color:#ccc;font-weight:300;font-family:'bentonsansregular';}</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div id="overlay" style="
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 100ms all;
+"></div>
+<div style="position: fixed; text-align: center;width: 100%; top: 20%;">
+<div style="width: 100%;">
+<img class="rs rs-image_two" src="/logo1.png" style="height: 30%; max-width: 95%;"></div>
+<div style="width: 100%; margin-top: 20px; ">
+<img class="rs rs-image" src="/logo2.png" style="max-width: 95%;">
+</div>
+<div style="width: 100%;">
+<p style="
+    color: rgba(255, 255, 255, 0.97);
+    font-family: 'bentonsansregular';
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    margin-top: 40px;
+">Get notified of launch</p>
+<form target="_blank" action="//basketballforever.us11.list-manage.com/subscribe/post?u=79e4c96c26f6cd5fde9238a65&amp;id=0dd71300bf" method="post">
+<input type="text" name="FNAME" placeholder="Name"/>
+<input type="text" name="EMAIL" placeholder="Email"/>
+<input type="submit" style="background: rgba(0, 0, 0, 0.45);height: 45px;position: absolute;margin-top: 4px;margin-left: 8px;border: 1px solid white;color: white;border-radius: 2px;font-size: 16px;font-weight: 400;padding-left: 15px;padding-right: 15px;text-transform: uppercase;">
+</form>
+</div>
+<div style="width: 100%; height: 50px; z-index: 999;text-align: center; margin-top: 55px;">
+<a href="http://facebook.com/BasketballForeverPage" target="_blank"><i class="social-icon fa fa-facebook" style="color: white;"></i></a>
+<a href="http://twitter.com/bballforeverfb" target="_blank"><i class="social-icon fa fa-twitter" style="color: white;margin-right: -15px"></i></a>
+</div>
+</div>
+<video autoplay id="bgvid" loop muted>
+<source src="/video.mp4" type="video/mp4">
+</video>
+<div style="height: 50px; width: 50px; position: fixed; left: 20px; bottom: 30px;">
+<i class="fa fa-volume-off volume-button-down" style="display: block;"></i>
+<i class="fa fa-volume-up volume-button-up" style="display: none;"></i>
+</div>
+<script type="text/javascript">
+    $(".volume-button-down").click(function(e) {
+
+    	$("video").removeProp("muted");
+    	$(this).hide();
+    	$(".volume-button-up").show();
+
+    });
+
+    $(".volume-button-up").click(function(e) {
+
+    	$("video").prop("muted", true);
+    	$(this).hide();
+    	$(".volume-button-down").show();
+
+    });
+
+    $("input").focus(function() {
+        $("#overlay").css({
+            background: 'rgba(0, 0, 0, 0.8)'
+        });
+    });
+
+    $("input").blur(function() {
+        $("#overlay").css({
+            background: 'rgba(0, 0, 0, 0.5)'
+        });
+    });
+
+    </script>
+</body>
+</html>
